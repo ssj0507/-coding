@@ -65,16 +65,54 @@
 
 
 
+/*첫번째 섹션 - 글자*/
+
+#content01 {padding:100px 0;text-align:center;}
+#content01 h2 {font-size:24px;font-weight:500;margin-bottom:10px;}
+#content01 p {font-weight:300;margin-bottom:30px;letter-spacing:-0.025em;}
+#content01 h3 {font-size:24px;font-weight:500;margin-bottom:10px;}
 
 
 
+/*첫번째 섹션 - 사진*/
+
+#content01 .container {display:flex;width:1200px;margin:0 auto;}
+#content01 figure {flex:1;padding:0 15px;}
+#content01 img {max-width:100%;}
 
 
+#content01 figure strong {display:block;margin:10px 0;font-size:20px;font-weight:300;}
+#content01 figure span {display:block;margin:10px 0;}
+#content01 figure span .price {display:block;margin:10px 0;}
+
+#content01 .case {overflow:hidden;}
+#content01 figure img {transition:0.4s;}
+#content01 figure:hover img {transform:scale(1.05)}
 
 
+/*두번째 섹션 - 글자*/
+
+#content02 {padding:100px 0;background: #f4f4f4;height: 400px;}
+#content02 .container {text-align: center;}
+#content02 .container h2 {font-size:24px;font-weight:500;margin-bottom:10px;}
+
+#content02 .container>ul {font-size:15px;font-weight: 300;display:flex;justify-content:center;margin-bottom:20px;text-align: center;}
+#content02 .container>ul>li>a {display:block;padding:0 15px;position:relative;}
+#content02 .container>ul>li~li>a:before {content:"";display:block;width:1px;height: 12px;background:#333;position:absolute;top:50%;left:0;transform:translateY(-50%);}
 
 
+/*두번째 섹션 - 그림*/
 
+#content02 .container02 {display:flex; width:1200px;margin: 0 auto;text-align: center;}
+#content02 .container02 figure {flex:1;padding: 0 15px;}
+#content02 .container02 img {max-width:100%;}
+#content01 .case {margin-bottom:25px;}
+
+#content02 figure {position: relative;}
+#content02 figure strong{display:block;margin:10px 0;}
+#content02 figure span {display:block;margin:10px 0;}
+#content02 figure span .price {font-size:24px;font-weight:500;margin-bottom:10px;}
+#content02 figure em {position: absolute;font-weight:500;}
 
 
 
