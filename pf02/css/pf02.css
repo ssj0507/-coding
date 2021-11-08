@@ -1,0 +1,107 @@
+#wrap {}
+
+/*헤더*/
+
+#header {position:sticky;top:0;left:0;line-height:100px;width:100%;color:#333;transition:1s;z-index:1;}
+#header:hover {background: #fff;color:#333;}
+#header.on {background: #fff;color:#333;line-height:80px;}
+
+/*헤더 - 로고*/
+
+#header h1 img {width:200px;}
+#header a {display:block;}
+
+#header .container {display:flex;justify-content:space-between;width:1200px;margin:0 auto;padding:0 15px;line-height:100px;}
+
+/*헤더 - 내비 글자*/
+
+#header nav {padding:0 15px;margin:0 auto;}
+#header nav>ul {display:flex;}
+#header nav>ul>li>a {display:block;padding:0 16px;}
+#header nav>ul>li:last-child>a {padding:0 0 0 16px;}
+#header nav>ul>li {position:relative;}
+
+/*헤더 - 내비 오른쪽 글자*/
+
+#header .right {font-size:14px;font-weight:400;}
+#header .right>ul {display:flex;}
+#header .right>ul>li {position:relative;}
+#header .right>ul>li>a {display:block;padding:0 10px;}
+#header .right>ul>li~li:after {content:"";display:block;width:1px;height:10px;background: #333;position:absolute;top:46px;left:0;}
+
+/*메인 비주얼 - 사진넣기 동그라미 순서 버튼넣기*/
+
+#main_visual {position:relative;}
+#main_visual  figure {height:600px; position: relative;}
+#main_visual .itm01 {background:url(../img/main_visual01.jpg) no-repeat center center/cover}
+#main_visual .itm02 {background:url(../img/main_visual02.jpg) no-repeat center center/cover}
+#main_visual .itm03 {background:url(../img/main_visual03.jpg) no-repeat center center/cover}
+
+#main_visual .main_slider .slick-dots {display:flex;position:absolute;bottom:30px;left:50%;transform:translateX(-50%)}
+#main_visual .main_slider .slick-dots li{border:1px solid #fff ;width:10px;height:10px; border-radius:50%; margin:0 15px;}
+#main_visual .main_slider .slick-dots li.slick-active{background:#fff;}
+#main_visual .main_slider .slick-dots li button {display:none;}
+
+/*메인 비주얼 - 글자넣기*/
+
+#main_visual figure .slg {position:absolute;top:30%;left:50%;transform:translate(-50%,-50%);width:1200px;padding:0 15px;text-align:left;}
+#main_visual figure .slg  h2 {font-size:55px;font-weight:500;margin-bottom:18px;letter-spacing:-0.025em}  
+#main_visual figure .slg  p {font-size:18px;font-weight:300;margin-bottom:38px;line-height:1.2;color:#575757;letter-spacing:-0.025em;}  
+#main_visual figure .slg  span {font-size:15px;font-weight:300;margin-bottom:38px;border:1px solid #333;padding:5px 15px;letter-spacing:-0.025em;}  
+
+/*메인 비주얼 - 글자넣기 흰색 */
+
+#main_visual figure.itm03 {text-shadow:0 1px 2px #333;}
+
+#main_visual figure.itm03 .slg {text-align:center;color:#f4f4f4;position:absolute;top:28%;left:50%;transform:translate(-50%,-50%);width:1200px;padding:0 15px;}
+#main_visual figure.itm03 .slg h2 {font-size:25px;font-weight:500;letter-spacing:-0.025em;margin-bottom:1px;}
+#main_visual figure.itm03 .slg p {font-size:50px;font-weight:700;letter-spacing:-0.025em;color:#f4f4f4;margin-bottom:15px}
+#main_visual figure.itm03 .slg strong {display:block;font-size:18px;font-weight:300;letter-spacing:-0.025em;line-height:1.2;margin-bottom:10px;}
+#main_visual figure.itm03 .slg a {font-size:15px;font-weight:300;}
+
+/*메인 비주얼 - 화살표*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*홈페이지 라인간격 볼수 있음*/
+/* {outline: 1px solid #f00;}
