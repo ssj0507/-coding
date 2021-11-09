@@ -124,19 +124,31 @@
 #content02 .container02 figure {flex:1;padding: 0 15px;}
 #content02 .container02 img {max-width:100%;}
 
-#content02 .case {overflow:hidden;}
-#content02 
+/*두번째 섹션 - 마우스 올리면 사진이 커지는거*/
 
-#content02 .spec {}
-#content02 .spec strong {font-size:18px;font-weight:400;letter-spacing:-0.025em;}
+#content02 .case {overflow:hidden;}
+#content02 figure img {transition:0.4s;}
+#content02 figure:hover img {transform:scale(1.05)}
+
+/*두번째 섹션 - 사진 밑에 글자 01*/
+
+#content02 .spec {margin-top:24px;}
+#content02 .spec strong {font-size:18px;font-weight:400;letter-spacing:-0.025em;margin-right:3px;}
 #content02 .spec span {font-size:20px;font-weight:100;letter-spacing:-0.025em;}
 
+/*두번째 섹션 - 사진 밑에 글자 02*/
+
+#content02 .price {margin-top:10px;}
+#content02 .price span {font-size:16px;font-weight:100;letter-spacing:-0.025em;margin-right:3px;}
+#content02 .price em {font-size:18px;font-weight:400;letter-spacing:-0.025em;}
+
+#content02 strong {display: block;margin-top:24px;font-size:18px;font-weight:400;letter-spacing:-0.025em;}
+#content02 .price {margin-bottom:20px;}
+#content02 .price span {}
+#content02 .price em {}
 
 
-
-
-
-
+/*세번째 섹션 - 그림*/
 
 
 
@@ -161,4 +173,4 @@
 
 
 /*홈페이지 라인간격 볼수 있음*/
-/* {outline: 1px solid #f00;}
+* {outline: 1px solid #f00;}
