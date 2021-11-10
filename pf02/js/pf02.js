@@ -36,4 +36,28 @@ $(function(){
         $('.main_slider figure').eq(c+1).addClass('on').siblings().removeClass('on');
     });
 
+    //------네번째 동영상------//
+
+    $('#mv01').YTPlayer({
+        videoURL:'https://youtu.be/SRTFvKv9Qk8',containment:'#self',
+        autoPlay:true,
+        mute:true,
+        startAt:0,
+        opacity:1,
+        showControls:false,
+        playOnlyIfVisible:true,
+        optimizeDisplay:false,
+    });
+    
+    $('#content04_mv i.xi-pause').on('click',function(){
+        $('mv01').YTPause();
+    });
+
+    $('#visual i.xi-play').on('click',function(){
+        $('#bgndVideo').YTPlay();
+    });
+
+    $('#visual i.xi-tv').on('click',function(){
+        $('#bgndVideo').YTPFullscreen();
+    });
 });  
