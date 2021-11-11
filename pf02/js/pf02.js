@@ -61,4 +61,20 @@ $(function(){
     $('#content04_mv i.xi-tv').on('click',function(){
         $('#mv01').YTPFullscreen();
     });
+
+    //toTop//
+$('#toTop').on('click', function(){
+    $('html, body').animate({scrollTop:0},400)
+});
+
+$(window).on('scroll', function(){
+    var sct=$(window).scrollTop();
+    //if(sct>400){
+    //    $('#toTop').fadeIn()
+   // }else
+    //$('#toTop').fadeOut()
+    //}
+   sct>400 ? $('#toTop').fadeIn() : $('#toTop').fadeOut();
+   $('#scroll_banner').css({top:300+sct})
+});
 });  

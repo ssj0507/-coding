@@ -20,6 +20,11 @@
 #header nav>ul>li>a {display:block;padding:0 16px;}
 #header nav>ul>li:last-child>a {padding:0 0 0 16px;}
 #header nav>ul>li {position:relative;}
+#header nav>ul>li>ul {display:none; position: absolute;top:90px;left:50%;transform:translateX(-50%); width:200%;text-align: center; background: #fff;border: 1px solid#ddd;padding-bottom: 10px; z-index:999;}
+#header nav>ul>li>ul>li>a {display: block; line-height:30px;background: #fff;position: relative;z-index:1;}
+#header nav>ul>li>ul:before {content: "";display:block;width:15px;height:15px;background: #fff;border: 1px solid#ddd;position: absolute;top:-8px;left:50%;transform: translateX(-50%) rotate(45deg);}
+#header nav>ul>li:hover>ul {display: block;}
+
 
 /*헤더 - 내비 오른쪽 글자*/
 
@@ -97,9 +102,10 @@
 
 /*첫번째 섹션 - 사진 밑에 오는 글자*/
 
-#content01 figure strong {display:block;margin-bottom:5px; font-size:25px;font-weight:400;letter-spacing:-0.025em;}
-#content01 figure span {font-size:15px; display:block;margin-bottom:10px; font-weight:300;letter-spacing:-0.025em;}
-#content01 figure .price {display:block;font-size:18px;font-weight:400;letter-spacing:-0.025em;}
+#content01 .st {margin-top:24px;}
+#content01 .st strong {display:block;margin-bottom:5px; font-size:25px;font-weight:400;letter-spacing:-0.025em;}
+#content01 .st span {font-size:15px; display:block;margin-bottom:10px; font-weight:300;letter-spacing:-0.025em;}
+#content01 .st .price {display:block;font-size:18px;font-weight:400;letter-spacing:-0.025em;}
 
 
 /*#content01 .case {overflow:hidden;}
@@ -189,11 +195,16 @@
 #content04_mv .spec strong {display:block;font-size:24px;font-weight:400;letter-spacing:-0.025em;margin-bottom:15px;}
 #content04_mv .spec span {display:block; font-size:15px;font-weight:100;letter-spacing:-0.025em;margin-bottom:70px;line-height:1.3;}
 
-#content04_mv .pre {text-align:center;margin:16px 0;}
+
+#content04_mv .pre {text-align:center;margin:16px 0;cursor:pointer;}
 #content04_mv .pre em {display:inline-block;font-size:20px;font-weight:300;border:1px solid #001a71;padding:10px 50px;position:relative;}
+
+/*네번째 섹션 - 사각형 박스에 색깔나오는거*/
+
 #content04_mv .pre em:before {content:"";display:block;width:0;height:100%;background: rgba(0, 26, 113, 0.3);position:absolute;top:0;left:0;transition:0.5s; z-index:1;}
 #content04_mv .pre em:hover:before {width:100%;}
 #content04_mv .pre em span {position:relative;z-index:333}
+
 /*다섯번째 섹션 - 글자*/
 
 #conter05 {padding:100px 0;text-align:center;}
@@ -242,16 +253,41 @@
 
 #footer .sns {font-size:30px;}
 
-#footer .cssx {width:70%;line-height:30px;padding:30px 0 0 0}
+#footer .cssx {width:70%;line-height:30px;padding:40px 60px 0 0;}
+#footer .cssx address {font-size:15px; font-weight:300;letter-spacing:-0.025em;line-height:2;margin:22px auto;}
 
 #footer li {display:inline-block;font-size:15px;font-weight:100;}
 
-#footer .con01 {line-height:30px;padding:10px;border:1px solid #ddd;}
+#footer .con01 {line-height:30px;margin:40px 0;}
+#footer .ccc {padding:10px;border:1px solid #ddd;}
 
 #footer .con01 strong{display:block;font-size:14px;font-weight:100;}
 #footer .con01 span{display:block;font-size:18px; font-weight:700;}
-#footer .price b {font-size:14px;font-weight:100;}
-#footer .con01 em{display:block;font-size:14px;font-weight:100;}
+#footer .price b {font-size:14px;font-weight:100;margin-left: 10px;}
+#footer .con01 em {display:block;font-size:14px;font-weight:100;}
+
+
+/*스크롤 배너*/
+
+#scroll_banner {position: absolute;top:300px;right:50px;transition: 1s;text-align: center;cursor:pointer;}
+#scroll_banner li {padding:15px;font-size:15px; background: #ddd;color: #333;margin:15px 0;}
+#scroll_banner i {font-size:30px;padding:20px;background: #ddd;color: #333;border-radius: 50%;}
+
+/*#scroll_banner .dd i {font-size:30px;padding:20px;background: #ddd;color: #333;border-radius: 50%;}
+#scroll_banner .dd i:before {content:"";display:block;width:0;height:100%;background: rgba(0, 26, 113, 0.3);position:absolute;top:0;left:0;transition:0.5s; z-index:1;}
+#scroll_banner .dd i:hover:before {width:100%;}
+
+
+/*네번째 섹션 - 사각형 박스에 색깔나오는거*/
+
+/*#content04_mv .pre em:before {content:"";display:block;width:0;height:100%;background: rgba(0, 26, 113, 0.3);position:absolute;top:0;left:0;transition:0.5s; z-index:1;}
+#content04_mv .pre em:hover:before {width:100%;}
+#content04_mv .pre em span {position:relative;z-index:333}
+
+/*toTop*/
+
+#toTop {display:none;position:fixed;bottom:100px;right:100px;cursor:pointer;}
+#toTop i {padding:10px;font-size:20px;color:#f4f4f4;background: #001a71;}
 
 
 
@@ -260,4 +296,4 @@
 
 /*홈페이지 라인간격 볼수 있음*/
 
-* {outline: 1px solid #f00;}
+/* {outline: 1px solid #f00;}
