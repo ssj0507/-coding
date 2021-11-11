@@ -39,7 +39,8 @@ $(function(){
     //------네번째 동영상------//
 
     $('#mv01').YTPlayer({
-        videoURL:'https://youtu.be/SRTFvKv9Qk8',containment:'#self',
+        videoURL:'https://youtu.be/SRTFvKv9Qk8',
+        containment:'self',
         autoPlay:true,
         mute:true,
         startAt:0,
@@ -50,14 +51,14 @@ $(function(){
     });
     
     $('#content04_mv i.xi-pause').on('click',function(){
-        $('mv01').YTPause();
+        $('#mv01').YTPause();
     });
 
-    $('#visual i.xi-play').on('click',function(){
-        $('#bgndVideo').YTPlay();
+    $('#content04_mv i.xi-play').on('click',function(){
+        $('#mv01').YTPlay();
     });
 
-    $('#visual i.xi-tv').on('click',function(){
-        $('#bgndVideo').YTPFullscreen();
+    $('#content04_mv i.xi-tv').on('click',function(){
+        $('#mv01').YTPFullscreen();
     });
 });  
