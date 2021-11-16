@@ -12,12 +12,43 @@ $(function(){
     });
 
     $('.main_slider').slick({
-        autoplay:true,
-        autoplaySpeed:800,
+        //autoplay:true,
+        autoplaySpeed:400,
         pauseOnHover:false,
         arrows:false,
         dots:true,
     });
+     //제품 슬라이드
+$('.pr_slider'). slick({
+    
+    arrows:false,
+    autoplay:true,
+    slidesToShow: 4,
+    //centerMode:true,
+    //centerPadding:"100px",
+
+});
+
+
+//제품 슬라이드 가운데 커지는거랑 바 이동//
+
+$('.pr_slider figure').eq(4).addClass('on')
+$('.pr_slider').on('afterChange',function(e,s,c){
+    //c = 1,2.......
+    $('.pr_slider figure').eq(c+8).addClass('on').siblings().removeClass('on');
+    $('#content01 .slide_bar>span').css({left:c*100})
+    
+});
+
+
+//제품 슬라이드 화살표//
+
+$('#content01 .btn i.xi-angle-left-thin').on('click',function(){
+    $('.pr_slider').slick('slickPrev');
+});
+$('#content01 .btn i.xi-angle-right-thin').on('click',function(){
+    $('.pr_slider').slick('slickNext');
+});
 
     //------화살표------//
 
@@ -28,13 +59,7 @@ $(function(){
         $('.main_slider').slick('slickNext');
     });
 
-    //------글자효과------//
-
-    $('.main_slider figure').eq(1).addClass('on')
-    $('.main_slider').on('afterChange',function(e,s,c){
-        //console.log(c);
-        $('.main_slider figure').eq(c+1).addClass('on').siblings().removeClass('on');
-    });
+   
 
     //------네번째 동영상------//
 

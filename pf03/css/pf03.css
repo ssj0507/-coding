@@ -1,6 +1,6 @@
 /*홈페이지 라인간격 볼수 있음*/
 
-* {outline: 1px solid #f00;}
+/* {outline: 1px solid #f00;}
 
 #wrap {}
 
@@ -51,23 +51,14 @@
 
 
 
+/*메인 비주얼 - 사진넣기 */
 
-
-
-
-
-
-
-
-
-/*메인 비주얼 - 사진넣기 동그라미 순서 버튼넣기*/
-
-#main_visual {position:relative;}
+#main_visual {position: relative;}
 #main_visual  figure {height:600px; position: relative;}
-#main_visual .itm01 {background:url(../img/main_visual01.jpg) no-repeat center center/cover}
+#main_visual .itm01 {background:url(../img/main_visual01.jpg) no-repeat center center/cover;}
 #main_visual .itm02 {background:url(../img/main_visual02.jpg) no-repeat center center/cover}
 #main_visual .itm03 {background:url(../img/main_visual03.jpg) no-repeat center center/cover}
-#main_visual .itm03 {background:url(../img/main_visual04.jpg) no-repeat center center/cover}
+#main_visual .itm04 {background:url(../img/main_visual04.jpg) no-repeat center center/cover}
 
 /*버튼*/
 #main_visual .main_slider .slick-dots {display:flex;position:absolute;bottom:30px;left:50%;transform:translateX(-50%)}
@@ -75,38 +66,114 @@
 #main_visual .main_slider .slick-dots li.slick-active{background:#fff;}
 #main_visual .main_slider .slick-dots li button {display:none;}
 
-/*메인 비주얼 - 글자넣기*/
+/*메인 비주얼 - 글자넣기01*/
 
-#main_visual figure .slg {position:absolute;top:36%;left:50%;transform:translate(-50%,-50%);width:1200px;padding:0 15px;text-align:left;}
-#main_visual figure .slg  h2 {font-size:55px;font-weight:500;margin-bottom:18px;letter-spacing:-0.025em;opacity:0;}  
-#main_visual figure.on .slg  h2 {opacity:1;transition:0.5s;}
-#main_visual figure .slg  p {font-size:18px;font-weight:300;margin-bottom:38px;line-height:1.2;color:#575757;letter-spacing:-0.025em;opacity:0;}  
-#main_visual figure.on .slg  p {opacity:1;transition:0.5s 0.3s;}
-#main_visual figure .slg  span {font-size:15px;font-weight:300;margin-bottom:38px;border:1px solid #333;padding:5px 15px;letter-spacing:-0.025em;opacity:0;cursor:pointer;}  
-#main_visual figure.on .slg  span {opacity:1;transition:0.5s 0.3s;}
+#main_visual figure .slg {position: absolute;top:50%;left:50%;width:1200px;padding:0 15px;transform:translate(-50%,-50%);color: #f4f4f4;text-align: center;line-height:1.2;}
+#main_visual figure .slg  h2 {font-size:50px;font-weight:100;letter-spacing:0.1em;}  
+#main_visual figure .slg  sub {font-size:50px;font-weight:500;letter-spacing:0.1em;vertical-align: baseline;font-size: inherit;}  
+#main_visual figure .slg  p {font-size:20px;font-weight:300;line-height:1.2;color:#f4f4f4;line-height:1.2;letter-spacing:0.1em;margin-top:20px;}  
 
 
-/*메인 비주얼 - 글자넣기 흰색 */
 
-#main_visual figure.itm03 {text-shadow:0 1px 2px #333;}
+/*메인 비주얼 - 글자넣기02*/
 
-#main_visual figure.itm03 .slg {text-align:center;color:#f4f4f4;position:absolute;top:28%;left:50%;transform:translate(-50%,-50%);width:1200px;padding:0 15px;}
+#main_visual figure.itm02 {position: relative;}
 
-#main_visual figure.itm03 .slg h2 {font-size:25px;font-weight:500;letter-spacing:-0.025em;margin-bottom:1px;opacity:0;}
-#main_visual figure.on.itm03 .slg h2 {opacity:1;transition: 0.5s;}
-#main_visual figure.itm03 .slg p {font-size:50px;font-weight:700;letter-spacing:-0.025em;color:#f4f4f4;margin-bottom:15px;opacity:0;}
-#main_visual figure.on.itm03 .slg p {opacity:1;transition:0.5s;}
-#main_visual figure.itm03 .slg strong {display:block;font-size:18px;font-weight:300;letter-spacing:-0.025em;line-height:1.2;margin-bottom:10px;opacity:0;}
-#main_visual figure.on.itm03 .slg strong {opacity:1;transition:0.5s 0.3s;}
+#main_visual figure.itm02 .slg {position: absolute;top:50%;left:50%;width:1200px;padding:0 15px;transform:translate(-50%,-50%);color: #333;text-align:left;line-height:1.2;}
 
-#main_visual figure.itm03 .slg a {font-size:15px;font-weight:300;opacity:0;}
-#main_visual figure.on.itm03 .slg a {opacity:1;transition:0.5s 0.3s;}
+#main_visual figure.itm02 .slg h2 {font-size:50px;font-weight:700;letter-spacing:-0.025em;margin-bottom:1px;}
 
+#main_visual figure.itm02 .slg p {font-size:30px;font-weight:400;letter-spacing:-0.025em;color: #333}
+#main_visual figure.itm02 .slg span {display:flex;font-size:18px;font-weight:500;letter-spacing:-0.025em;line-height:1.2;color:#40bfdf;position:absolute;top:150%; left:53%;}
+
+/*메인 비주얼 - 글자넣기03*/
+
+#main_visual figure.itm03 {position: relative;}
+
+#main_visual figure.itm03 .slg {position: absolute;top:50%;left:50%;width:1200px;padding:0 15px;transform:translate(-50%,-50%);color: #333;text-align:left;line-height:1.2;}
+
+#main_visual figure.itm03 .slg h2 {font-size:30px;font-weight:500;letter-spacing:-0.025em;color: #333;}
+
+#main_visual figure.itm03 .slg p {font-size:50px;font-weight:700;letter-spacing:-0.025em;color: #333;margin-bottom:10px;}
+
+#main_visual figure.itm03 .slg strong {display:block;font-size:18px;font-weight:500;letter-spacing:-0.025em;line-height:1.2;}
+
+/*메인 비주얼 - 글자넣기04*/
+
+#main_visual figure.itm04 {position: relative;}
+
+#main_visual figure.itm04 .slg {position: absolute;top:50%;left:50%;width:1200px;padding:0 15px;transform:translate(-50%,-50%);color: #333;text-align:left;line-height:1.2;}
+
+#main_visual figure.itm04 .slg h2 {font-size:30px;font-weight:500;letter-spacing:-0.025em;color: #333;}
+
+#main_visual figure.itm04 .slg p {font-size:50px;font-weight:700;letter-spacing:-0.025em;color: #333;margin-bottom:10px;}
+
+#main_visual figure.itm04 .slg strong {display:block;font-size:18px;font-weight:500;letter-spacing:-0.025em;line-height:1.2;}
 
 /*메인 비주얼 - 화살표*/
 
-#main_visual .main_btn i {position:absolute;top:44%;padding:10px; background:rgba(0,0,0,0.5);color:#f4f4f4; font-size:30px;border-radius:50%;cursor:pointer;}
+#main_visual .main_btn i {position:absolute;top: 44%;padding:10px; background:rgba(0,0,0,0.5);color:#f4f4f4; font-size:30px;border-radius:50%;cursor:pointer;}
 #main_visual .main_btn i.xi-angle-left-thin {left:100px;}
 #main_visual .main_btn i.xi-angle-right-thin {right:100px;}
+
+
+/*첫번째 섹션 - 글자*/
+
+#content01 {position: relative; padding:150px 0;text-align:center;color:#333;}
+#content01 h2 {font-size:30px;font-weight:500;margin-bottom:12px;letter-spacing:-0.025em;}
+#content01 p {font-size:18px; font-weight:300;margin-bottom:30px;letter-spacing:-0.025em;}
+
+/*첫번째 섹션 - 사진*/
+
+#content01 .container {width:1200px;margin:0 auto;}
+#content01 .container figure {padding:0 15px;}
+#content01 .container figure img {max-width:100%;border-radius:25px;transition:0.4s;}
+#content01 .case {margin-bottom:25px;overflow:hidden;}
+#content01 .container figure:hover img {transform:scale(1.1);}
+
+/*첫번째 섹션 - 글자밑에글자*/
+
+#content01 strong {display:block; font-size:16px;font-weight:400;margin-bottom:5px;}
+#content01 span {font-size:14px;font-weight:700;}
+
+
+/*첫번째 섹션 - 아이콘*/
+
+#content01 .btn {}
+#content01 .btn i {position:absolute;top:53%;left:50%;transform:translate(-50%,-50%);font-size:40px;padding:10px;background:#fff;border-radius: 50%;cursor: pointer;}
+#content01 .btn i.xi-angle-left-thin {margin-left:-635px;}
+#content01 .btn i.xi-angle-right-thin {margin-left:635px;}
+
+/*첫번째 섹션 - 바 움직이는거*/
+
+#content01 .slide_bar {position:relative; width:800px;height:5px;background: #ddd;border-radius:3px;margin:30px auto;overflow:hidden;cursor: pointer;}
+#content01 .slide_bar>span {display:block;width:100px;height:5px;border-radius:3px;background: #333;position: absolute;top:0;left:0;transition:0.5s;cursor: pointer;}
+
+/*두번째 섹션 - 글자*/
+
+#content02 {padding:150px 0;text-align: center;background: #f4f4f4;}
+#content02 h2 {font-size:30px;font-weight:500;margin-bottom:12px;letter-spacing:-0.025em;}
+#content02 p {font-size:18px; font-weight:300;margin-bottom:30px;letter-spacing:-0.025em;}
+
+
+/*두번째 섹션 - 사진과 글자*/
+
+#content02 .container {position: relative; display:flex;flex-wrap:wrap; width:1200px;margin:0 auto;padding:0 15px;}
+#content02 .container figure {padding:0 15px;}
+#content02 img {max-width:100%;}
+
+#content02 .dis {position: absolute;top:5%;right:52%; text-align:right;}
+#content02 .dis h3 {font-size:25px;font-weight:300;margin-bottom:10px;letter-spacing:-0.025em;}
+#content02 .dis h3:after {content:"";display:block;width:30px;height:3px;background: #333;margin:15px 0 0 auto}
+#content02 .dis p {font-size:35px;font-weight:500;letter-spacing:-0.025em;}
+
+#content02 .con01 {position: relative; width:20%;}
+#content02 .con01 img {border-radius:50%;}
+#content02 .con02 {display:block;width:570px;height:150px; background: #fff;margin:0 auto;}
+
+
+
+
+
 
 
