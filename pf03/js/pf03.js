@@ -59,33 +59,15 @@ $('#content01 .btn i.xi-angle-right-thin').on('click',function(){
         $('.main_slider').slick('slickNext');
     });
 
+//탭 메뉴//
+$('.tab_menu li').on('click', function(){
+    var idx=$(this).index();
+    // $('.tab_con>div').eq(idx).show().siblings().hide();
+    $('.tab_con>div').eq(idx).addClass('on').siblings().removeClass('on');
+    $(this).addClass('on').siblings().removeClass('on');
+});
+
    
-
-    //------네번째 동영상------//
-
-    $('#mv01').YTPlayer({
-        videoURL:'https://youtu.be/SRTFvKv9Qk8',
-        containment:'self',
-        autoPlay:true,
-        mute:true,
-        startAt:0,
-        opacity:1,
-        showControls:false,
-        playOnlyIfVisible:true,
-        optimizeDisplay:false,
-    });
-    
-    $('#content04_mv i.xi-pause').on('click',function(){
-        $('#mv01').YTPause();
-    });
-
-    $('#content04_mv i.xi-play').on('click',function(){
-        $('#mv01').YTPlay();
-    });
-
-    $('#content04_mv i.xi-tv').on('click',function(){
-        $('#mv01').YTPFullscreen();
-    });
 
     //toTop//
 $('#toTop').on('click', function(){
