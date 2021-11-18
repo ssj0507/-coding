@@ -1,6 +1,6 @@
 /*홈페이지 라인간격 볼수 있음*/
 
-* {outline: 1px solid #f00;}
+/* {outline: 1px solid #f00;}
 
 #wrap {}
 
@@ -238,25 +238,17 @@
 
 #content04 .con04_slider {} 
 #content04 .con04_slider figure {position: relative;} 
-#content04 .con04_ddd {position: absolute;top:3%;left:53%;} 
-#content04 .con04_ddd {position: absolute;top:3%;left:53%;} 
+#content04 .con04_ddd {position: absolute;top:3%;left:54%;text-align:left;z-index: 999;} 
+#content04 .con04_ddd strong {display: block; font-size:50px;font-weight:500;margin-bottom:25px;line-height:1.2;} 
+#content04 .con04_ddd sub {font-size:55px;font-weight:700;letter-spacing:0.1em;vertical-align: baseline;font-size: inherit;}
+#content04 .con04_ddd .cc {margin-top:22px;border:1px solid #333;padding:5px;border-radius:10px;width:250px; cursor: pointer;}
+#content04 .con04_ddd .cc:hover {background: #e6cd5d;}
+
+#content04 .con04_ddd span {display: block; font-size:20px;font-weight:400;letter-spacing:0.3em;text-align: center;} 
 
 
+ 
 
-/*메인 비주얼 - 글자넣기01*/
-
-/*
-#main_visual {position: relative;}
-#main_visual  figure {height:600px; position: relative;}
-#main_visual .itm01 {background:url(../img/main_visual01.jpg) no-repeat center center/cover;}
-#main_visual .itm02 {background:url(../img/main_visual02.jpg) no-repeat center center/cover}
-#main_visual .itm03 {background:url(../img/main_visual03.jpg) no-repeat center center/cover}
-#main_visual .itm04 {background:url(../img/main_visual04.jpg) no-repeat center center/cover}
-
-#main_visual figure .slg {position: absolute;top:50%;left:50%;width:1200px;padding:0 15px;transform:translate(-50%,-50%);color: #f4f4f4;text-align: center;line-height:1.2;}
-#main_visual figure .slg  h2 {font-size:50px;font-weight:100;letter-spacing:0.1em;}  
-#main_visual figure .slg  sub {font-size:50px;font-weight:500;letter-spacing:0.1em;vertical-align: baseline;font-size: inherit;}  
-#main_visual figure .slg  p {font-size:20px;font-weight:300;line-height:1.2;color:#f4f4f4;line-height:1.2;letter-spacing:0.1em;margin-top:20px;}*/
 
 
 

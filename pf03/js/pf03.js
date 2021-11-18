@@ -68,14 +68,16 @@ $('.tab_menu li').on('click', function(){
 });
 
 //네번째 섹션 슬라이더//
-
-$('.con04_slider').slick({
+  
+//$('.con04_slider'). slick({
+    //arrows:false,
     //autoplay:true,
-    autoplaySpeed:400,
-    pauseOnHover:false,
-    arrows:false,
-    dots:true,
-});   
+   // slidesToShow:1,
+    
+      
+
+//});
+
 
     //toTop//
 $('#toTop').on('click', function(){
