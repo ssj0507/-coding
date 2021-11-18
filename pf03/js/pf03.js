@@ -67,7 +67,15 @@ $('.tab_menu li').on('click', function(){
     $(this).addClass('on').siblings().removeClass('on');
 });
 
-   
+//네번째 섹션 슬라이더//
+
+$('.con04_slider').slick({
+    //autoplay:true,
+    autoplaySpeed:400,
+    pauseOnHover:false,
+    arrows:false,
+    dots:true,
+});   
 
     //toTop//
 $('#toTop').on('click', function(){
