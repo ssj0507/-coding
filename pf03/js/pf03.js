@@ -12,13 +12,25 @@ $(function(){
     });
 
     $('.main_slider').slick({
-        //autoplay:true,
-        autoplaySpeed:400,
+        autoplay:true,
+        autoplaySpeed:3000,
         pauseOnHover:false,
         arrows:false,
         dots:true,
     });
-     //제품 슬라이드
+
+ //------화살표------//
+
+ $('#main_visual .main_btn i.xi-angle-left-thin').on('click', function(){
+    $('.main_slider').slick('slickPrev');
+});
+$('#main_visual .main_btn i.xi-angle-right-thin').on('click', function(){
+    $('.main_slider').slick('slickNext');
+});
+
+
+
+  //제품 슬라이드
 $('.pr_slider'). slick({
     
     arrows:false,
@@ -50,14 +62,7 @@ $('#content01 .btn i.xi-angle-right-thin').on('click',function(){
     $('.pr_slider').slick('slickNext');
 });
 
-    //------화살표------//
-
-    $('#main_visual .main_btn i.xi-angle-left-thin').on('click', function(){
-        $('.main_slider').slick('slickPrev');
-    });
-    $('#main_visual .main_btn i.xi-angle-right-thin').on('click', function(){
-        $('.main_slider').slick('slickNext');
-    });
+   
 
 //탭 메뉴//
 $('.tab_menu li').on('click', function(){
@@ -69,15 +74,22 @@ $('.tab_menu li').on('click', function(){
 
 //네번째 섹션 슬라이더//
   
-//$('.con04_slider'). slick({
-    //arrows:false,
-    //autoplay:true,
-   // slidesToShow:1,
-    
-      
+$('.con04_slider').slick({
+    arrows:false,
+    autoplay:true,
+    slidesToShow:1,
+    autoplaySpeed:1500,
+    dots:true,
 
-//});
+});
+//------네번째 섹션화살표------//
 
+$('#content04 .con04_btn i.xi-angle-left-thin').on('click', function(){
+    $('.con04_slider').slick('slickPrev');
+});
+$('#content04 .con04_btn i.xi-angle-right-thin').on('click', function(){
+    $('.con04_slider').slick('slickNext');
+}); 
 
     //toTop//
 $('#toTop').on('click', function(){
