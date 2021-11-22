@@ -30,7 +30,7 @@ $('#main_visual .main_btn i.xi-angle-right-thin').on('click', function(){
 
 
 
-  //제품 슬라이드
+  // 첫번째 섹션 제품 슬라이드
 $('.pr_slider'). slick({
     
     arrows:false,
@@ -42,7 +42,7 @@ $('.pr_slider'). slick({
 });
 
 
-//제품 슬라이드 가운데 커지는거랑 바 이동//
+//첫번째 섹션 제품 슬라이드 가운데 커지는거랑 바 이동//
 
 $('.pr_slider figure').eq(4).addClass('on')
 $('.pr_slider').on('afterChange',function(e,s,c){
@@ -53,7 +53,7 @@ $('.pr_slider').on('afterChange',function(e,s,c){
 });
 
 
-//제품 슬라이드 화살표//
+//첫번째 섹션 제품 슬라이드 화살표//
 
 $('#content01 .btn i.xi-angle-left-thin').on('click',function(){
     $('.pr_slider').slick('slickPrev');
@@ -73,8 +73,30 @@ $('.tab_menu li').on('click', function(){
 });
 
 //네번째 섹션 슬라이더//
+
+$('.con04_slider02').slick({
+    arrows:false,
+    slidesToShow:3,
+    autoplay:true,
+    autoplaySpeed:2000,
+    pauseOnHover:false,
+    pauseOnFocus:false,
+
+});
+
+//첫번째 섹션 제품 슬라이드 화살표//
+
+$('.container .con04-d i.xi-angle-left-thin').on('click',function(){
+    $('.con04_slider02').slick('slickPrev');
+});
+$('.container .con04-d i.xi-angle-right-thin').on('click',function(){
+    $('.con04_slider02').slick('slickNext');
+});
+
+
+//다섯번째 섹션 슬라이더//
   
-$('.con04_slider').slick({
+$('.con05_slider').slick({
     arrows:false,
     autoplay:true,
     slidesToShow:1,
@@ -82,13 +104,13 @@ $('.con04_slider').slick({
     dots:true,
 
 });
-//------네번째 섹션화살표------//
+//------다섯번째 섹션화살표------//
 
-$('#content04 .con04_btn i.xi-angle-left-thin').on('click', function(){
-    $('.con04_slider').slick('slickPrev');
+$('#content05 .con05_btn i.xi-angle-left-thin').on('click', function(){
+    $('.con05_slider').slick('slickPrev');
 });
-$('#content04 .con04_btn i.xi-angle-right-thin').on('click', function(){
-    $('.con04_slider').slick('slickNext');
+$('#content05 .con05_btn i.xi-angle-right-thin').on('click', function(){
+    $('.con05_slider').slick('slickNext');
 }); 
 
     //toTop//
@@ -104,7 +126,7 @@ $(window).on('scroll', function(){
     //$('#toTop').fadeOut()
     //}
    sct>400 ? $('#toTop').fadeIn() : $('#toTop').fadeOut();
-   $('#scroll_banner').css({top:300+sct})
+   $('').css({top:300+sct})
 });
 
 });  
