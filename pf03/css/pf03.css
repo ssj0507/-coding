@@ -1,15 +1,17 @@
 
 /*홈페이지 라인간격 볼수 있음*/
 
-* {outline: 1px solid #f00;}
+/* {outline: 1px solid #f00;}*/
 
+html {font-size:20px;}
+body {font-size:0.8rem;}
 #wrap {}
 
 /*헤더*/
 
-#header {position:sticky;top:0;left:0;line-height:100px;width:100%;color:#333;transition:1s;z-index:999;}
+#header {position:sticky;top:0;left:0;line-height:5rem;width:100%;color:#333;transition:1s;z-index:999;}
 #header:hover {background: #fff;color:#333;border-bottom:1px solid#ddd;}
-#header.on {background: #fff;color:#333;line-height:80px;border-bottom:1px solid#333 ;}
+#header.on {background: #fff;color:#333;line-height:4rem;border-bottom:1px solid#333 ;}
 
 /*헤더 - 로고*/
 
