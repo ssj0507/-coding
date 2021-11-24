@@ -136,7 +136,9 @@ $('#mopen').on('click', function(){
     $('.sns').fadeToggle();
 })
 
-
+$(window) .on('resize', function(){
+    $('.total').removeAttr('style')
+});
 
 
 });  

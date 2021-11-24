@@ -1,11 +1,12 @@
 
 /*홈페이지 라인간격 볼수 있음*/
 
-* {outline: 1px solid #f00;}*/
+/* {outline: 1px solid #f00;}*/
 
 html {font-size:20px;}
 body {font-size:0.8rem;}
 #wrap {}
+#header .sns {display: none;}
 
 /*헤더*/
 
@@ -31,7 +32,7 @@ body {font-size:0.8rem;}
 /*헤더 - 내비 글자 */
 .container-full {border-top:1px solid#ddd;}
 
-#header nav {padding:0 15px;}
+.ddgf {margin-left: auto;}
 #header nav>ul {display:flex;line-height:40px;font-size:18px;font-weight:400;}
 #header nav>ul>li>a {display:block;padding:0 40px;}
 #header nav>ul>li:last-child {}
@@ -386,18 +387,20 @@ body {font-size:0.8rem;}
     body {font-size:0.8rem;}
     #wrap {}
 
+    
+
     /*헤더*/
 
     #header {position:sticky;top:0;left:0;line-height:100px;width:100%;color:#333;transition:1s;z-index:999;}
     #header:hover {background: #fff;color:#333;border-bottom:1px solid#ddd;}
-    #header.on {background: #fff;color:#333;line-height:4rem;border-bottom:1px solid#333 ;}
+    #header.on {background: #fff;color:#333;line-height:4rem;border-bottom:1px solid#333 ;display:none;}
 
     /*헤더 - 로고*/
 
     #header h1 img {width:10rem;}
-    #header a {}
+    #header .sns {display:none; position:fixed;top:0rem; font-size:1.5rem;z-index:10000;}
 
-    #header .container {position: relative; text-align:center;width:auto;margin:0 auto;line-height:40px;}
+    #header .container {position: relative; text-align:center;width:auto;margin:0 auto;line-height:100px;}
 
     /*헤더 - 로고 내비 오른쪽 글자*/
 
@@ -409,37 +412,41 @@ body {font-size:0.8rem;}
 
     /*헤더 - 내비 글자 */
     .container-full {border-top:1px solid#ddd;}
+    .container-full 
 
-    .ddgf {position:fixed;top:0;left:0;background: #f00;border-right:1px solid #ddd; width:calc(100% - 80px); height:100vh;transition:0.4s;  z-index:9999999999999;}
+    .ddgf {margin-left:auto;position:fixed;top:0;left:-100%;background: #fff;border-right:1px solid #ddd; width:calc(100% - 80px); height:100vh;transition:0.4s;  z-index:999;}
     .ddgf.on {left:0;}
 
+    .gnb {display:flex;justify-content: space-between;align-items:center;padding-right:15px;}
 
     #header nav {padding:0 15px;}
-    #header nav>ul {display:flex;line-height:40px;font-size:18px;font-weight:400;}
-    #header nav>ul>li>a {display:block;padding:0 40px;}
-
+    #header nav>ul {display:block;line-height:40px;font-size:18px;font-weight:400;}
+    #header nav>ul>li>a {display:block;padding:0 2rem;position: relative;line-height:2rem;border-bottom:1px solid #ddd;}
+    #header nav>ul>li~li>a:after {content: "";display:none;width:1px;height:0.65rem;background: #666;position: absolute;top:50%;left:0;transform:translateY(-50%);}
 
     /*헤더 - 내비 글자 다단메뉴*/
 
     #header nav>ul>li {position:relative;}
-    #header nav>ul>li>ul {display:none; position: absolute;top:40px;left:50%;transform:translateX(-50%); width:100%;text-align: center; background: #fff;border: 1px solid#ddd;padding: 10px 0; z-index:999;}
+    #header nav>ul>li>ul {display:none; line-height:1.5rem;width:100%;background: #fff;border:none solid #ddd;padding:0.2rem 0.2rem  0.2rem;position:absolute;}
+    #header nav>ul>li:hover>ul {display:block;}
+
     #header nav>ul>li>ul>li~li {border-top: 1px solid#ddd;}
-    #header nav>ul>li>ul>li>a {display: block; line-height:30px;background: #fff;position: relative;z-index:1;}
-    #header nav>ul>li>ul:after {content: "";display:block;width:15px;height:15px;position: absolute;}
-    #header nav>ul>li:hover>ul {display: block;}
+    #header nav>ul>li>ul>li>a {display:block;text-align: center;padding:0 2rem;}
+    #header nav>ul>li>ul:before {content: "";display:block;width:15px;height:15px;position: absolute;}
+    
 
 
     /*헤더 - 내비 글자 다단메뉴02*/
-    #header .total dl {display:none;position:absolute;top:-1px;left:180px;width:100%;height:calc(100% + 2px); text-align:center; background: #fff;border: 1px solid #ddd;padding:10px 0;z-index:1000;}
+    #header .total dl {display:none;position:static;top:-1px;left:180px;width:100%;height:calc(100% + 2px); text-align:center; background: #fff;border: 1px solid #ddd;padding:10px 0;z-index:1000;}
     #header .total dl>dd~dd {border-top:1px solid #ddd;}
 
-    #header .total li:hover dl {display:block;}
+    #header .total li:hover dl {display:none;}
 
 
 
     /*헤더 - 내비 글자 검색창*/
 
-    .gnb {display:flex;justify-content: space-between;align-items:center;padding-right:15px;}
+    
     #header .header_form {border:1px solid #333;line-height:1;display: none;}
     #header .header_search input{border:none;outline:none;padding:0 5px;}
     #header .header_search button {background:none;border:none;}
@@ -753,6 +760,7 @@ body {font-size:0.8rem;}
     
 
     #mopen {display:block;}
+    #mopen.on {display:none;}
 
     /*toTop*/
 
