@@ -129,4 +129,14 @@ $(window).on('scroll', function(){
    $('').css({top:300+sct})
 });
 
+//모바일용 메뉴//
+
+$('#mopen').on('click', function(){
+    $('.ddgf').toggleClass('on');
+    $('.sns').fadeToggle();
+})
+
+
+
+
 });  
