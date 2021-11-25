@@ -35,9 +35,23 @@ $('.pr_slider'). slick({
     
     arrows:false,
     autoplay:true,
+    autoplaySpeed:3000,
     slidesToShow: 4,
-    //centerMode:true,
-    //centerPadding:"100px",
+    //모바일용 slick으로 한면에 꽉차게 하는것//
+    responsive: [
+        {
+          breakpoint: 769,
+          settings: {
+            slidesToShow: 3,
+          }
+        },
+        {
+            breakpoint: 600,
+            settings: {
+              slidesToShow: 1,
+            }
+          },
+    ]
 
 });
 
@@ -48,17 +62,17 @@ $('.pr_slider figure').eq(4).addClass('on')
 $('.pr_slider').on('afterChange',function(e,s,c){
     //c = 1,2.......
     $('.pr_slider figure').eq(c+8).addClass('on').siblings().removeClass('on');
-    $('#content01 .slide_bar>span').css({left:c*100})
+    $('#content01 .slide_bar>span').css({left:c* (100 / 8) + "%"})
     
 });
 
 
 //첫번째 섹션 제품 슬라이드 화살표//
 
-$('#content01 .btn i.xi-angle-left-thin').on('click',function(){
+$('#content01 .con01_btn i.xi-angle-left-thin').on('click',function(){
     $('.pr_slider').slick('slickPrev');
 });
-$('#content01 .btn i.xi-angle-right-thin').on('click',function(){
+$('#content01 .con01_btn i.xi-angle-right-thin').on('click',function(){
     $('.pr_slider').slick('slickNext');
 });
 
@@ -72,19 +86,61 @@ $('.tab_menu li').on('click', function(){
     $(this).addClass('on').siblings().removeClass('on');
 });
 
+//세번째 js로 하는 slick 버전//
+
+var Rsd = $('.r_slider');
+
+var slickOptions = {
+    infinite: true,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    autoplay:true,
+    autoplaySpeed:2000,
+    centerMode:true,
+    dots:false,
+    arrows:false
+};
+
+$(window).on('load resize', function() {
+    if($(window).width() > 768) {
+        Rsd.slick('unslick');
+    }else{
+        Rsd.not('.slick-initialized').slick(slickOptions);
+    }
+});
+
+
+
+
 //네번째 섹션 슬라이더//
 
 $('.con04_slider02').slick({
     arrows:false,
     slidesToShow:3,
     autoplay:true,
-    autoplaySpeed:2000,
+    autoplaySpeed:2500,
     pauseOnHover:false,
     pauseOnFocus:false,
 
+    responsive: [
+        {
+          breakpoint: 769,
+          settings: {
+            slidesToShow: 3,
+          }
+        },
+        {
+            breakpoint: 600,
+            settings: {
+              slidesToShow: 1,
+            }
+          },
+    ]
+
+
 });
 
-//첫번째 섹션 제품 슬라이드 화살표//
+//네번째 섹션 제품 슬라이드 화살표//
 
 $('.container .con04-d i.xi-angle-left-thin').on('click',function(){
     $('.con04_slider02').slick('slickPrev');
@@ -102,6 +158,20 @@ $('.con05_slider').slick({
     slidesToShow:1,
     autoplaySpeed:1500,
     dots:true,
+    responsive: [
+        {
+          breakpoint: 769,
+          settings: {
+            slidesToShow: 3,
+          }
+        },
+        {
+            breakpoint: 600,
+            settings: {
+              slidesToShow: 1,
+            }
+          },
+    ]
 
 });
 //------다섯번째 섹션화살표------//
@@ -126,19 +196,31 @@ $(window).on('scroll', function(){
     //$('#toTop').fadeOut()
     //}
    sct>400 ? $('#toTop').fadeIn() : $('#toTop').fadeOut();
-   $('').css({top:300+sct})
+   $(this).css({top:300+sct})
+});
+
+//다단메뉴에서 호버부분을 ( #header nav>ul>li:hover .total {display:none;})을 할때 사용하는것이다.//
+$('#header nav>ul>li>a').on('click', function(e){
+    if($('.ddgf').hasClass('on')) {
+        e.preventDefault();
+        $(this).next().stop().slideToggle();
+        $(this).parent().siblings().find('.total').stop().slideUp();
+    }
 });
 
 //모바일용 메뉴//
 
 $('#mopen').on('click', function(){
     $('.ddgf').toggleClass('on');
-    $('.sns').fadeToggle();
+    $('.search').fadeToggle();
 })
 
 $(window) .on('resize', function(){
     $('.total').removeAttr('style')
 });
+
+
+
 
 
 });  
