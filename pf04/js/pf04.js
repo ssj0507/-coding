@@ -5,9 +5,9 @@ $(function(){
         var sct=$(window).scrollTop();
         console.log(sct);
         if(sct>0) {
-            $('#header').addClass('on');
+            $('.herder').addClass('on');
         }else{
-            $('#header').removeClass('on');
+            $('.herder').removeClass('on');
         }
     });
 
