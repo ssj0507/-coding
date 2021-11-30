@@ -4,27 +4,24 @@ $(function(){
     $(window).on('scroll', function(){
         var sct=$(window).scrollTop();
         console.log(sct);
-        if(sct>0) {
-            $('.herder').addClass('on');
-        }else{
-            $('.herder').removeClass('on');
-        }
+        sct > 0 ? $('.herder').addClass('on') : $('.herder').removeClass('on');
     });
 
     $('.main_slider').slick({
         autoplay:true,
-        autoplaySpeed:4000,
         pauseOnHover:false,
+        pauseOnFocus:false,
+        fade:true,
         arrows:false,
         dots:true,
     });
 
  //------화살표------//
 
- $('#main_visual .main_btn i.xi-angle-left-thin').on('click', function(){
+ $('.main_visual .main_btn i.xi-angle-left-thin').on('click', function(){
     $('.main_slider').slick('slickPrev');
 });
-$('#main_visual .main_btn i.xi-angle-right-thin').on('click', function(){
+$('.main_visual .main_btn i.xi-angle-right-thin').on('click', function(){
     $('.main_slider').slick('slickNext');
 });
 
