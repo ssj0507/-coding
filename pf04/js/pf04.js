@@ -66,7 +66,8 @@ $(window).on('load resize', function() {
  
 
 //toTop//
-$('#toTop').on('click', function(){
+
+$('.toTop').on('click', function(){
     $('html, body').animate({scrollTop:0},400)
 });
 
@@ -92,8 +93,8 @@ $('#header nav>ul>li>a').on('click', function(e){
 
 //모바일용 메뉴//
 
-$('#mopen').on('click', function(){
-    $('.ddgf').toggleClass('on');
+$('.mopen').on('click', function(){
+    $('.gnb').toggleClass('on');
     $('.search').fadeToggle();
 })
 
