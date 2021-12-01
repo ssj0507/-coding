@@ -2,7 +2,7 @@
 
 /*홈페이지 라인간격 볼수 있음*/
 
- *{outline: 1px solid #f00;}
+ *{outline: 1px solid #f00--;}
 
 html {font-size:20px;}
 body {font-size:0.8rem;}
@@ -26,7 +26,7 @@ body {font-size:0.8rem;}
 
     .herder {position:sticky;top:0;left:0;line-height:4rem;width:100%;color:#333;transition:1s;z-index:888;}
     .herder:hover {background: #fff;color:#333;border-bottom:1px solid#ddd;}
-    .herder.on {background: #fff;color:#333;line-height:4rem;border-bottom:1px solid#333 ;}
+    .herder.on {background: #fff;color:#333;line-height:4rem;border-bottom:1px solid#333;display:none;}
 
 }
 
@@ -268,7 +268,12 @@ body {font-size:0.8rem;}
 .content02 {padding:150px 0 100px;text-align:center;background: #f2f2f2;position: relative;}
 .content02 h2 {font-family: 'Noto Serif', 'Noto Sans KR';font-size:30px;font-weight:500;margin-bottom:30px;letter-spacing:0.025em;}
 
-@media screen and (max-width:768px) {}
+@media screen and (max-width:768px) {
+    /*두번째 섹션 - 글자*/
+
+    .content02 {padding:150px 0 100px;text-align:center;background: #f2f2f2;position: relative;}
+    .content02 h2 {font-family: 'Noto Serif', 'Noto Sans KR';font-size:30px;font-weight:500;margin-bottom:30px;letter-spacing:0.025em;}
+}
 
 /*두번째 섹션 - 사진과 밑 글자*/
 
@@ -286,25 +291,114 @@ body {font-size:0.8rem;}
 .content02 .pic:hover .link {display:block;}
 .content02 .con02:hover .link {display:block;}
 
-@media screen and (max-width:768px) {}
+@media screen and (max-width:768px) {
+    /*두번째 섹션 - 사진과 밑 글자*/
+
+    .content02 .container {position:relative; display:flex;width:1200px;margin:0 auto;flex-flow:column wrap;max-height:800px;max-width:1200px;justify-content: space-between;}
+    .content02 .container>div {padding:0 15px 50px;}
+    .content02 .container img {width:100%;margin-bottom:15px;}
+    .content02  strong {display: block;font-size:20px;font-weight:400;margin-bottom:5px;letter-spacing:-0.025rem;}
+    .content02  span {display:block; font-size:15px;font-weight:300;letter-spacing:-0.025rem;}
+    .content02 .pic {position: relative;}
+    .content02 .pic .link {display:none;width:100%; position:absolute;bottom:110px;left:0;}
+    .content02 .con02 {position: relative;}
+    .content02 .con02 .link {display:none;width:100%; position: absolute;bottom:110px;left:0;}
+
+    .content02 i {font-size:25px;padding:10px;background:rgba(233, 233, 233, 0.5); color: #666; border-radius:50%;cursor: pointer;margin:8px;}
+    .content02 .pic:hover .link {display:block;}
+    .content02 .con02:hover .link {display:block;}
+}
 
 /*두번째 섹션 - 화살표*/
 
 .content02 .con02_btn i {position:absolute;top:50%;transform:translate(-50%,-50%);font-size:40px;padding:10px;background:transparent;border-radius: 50%;cursor: pointer;}
-.content02 .con02_btn i.xi-angle-left-thin {left:200px;}
-.content02 .con02_btn i.xi-angle-right-thin {right:140px;}
+.content02 .con02_btn i.xi-angle-left-thin {left:330px;}
+.content02 .con02_btn i.xi-angle-right-thin {right:270px;}
 
 @media screen and (max-width:768px) {}
 
 /*세번째 섹션 - 글자*/
+
 .content03 {padding:150px 0;}
 .content03 .container {display:flex;width:60rem;margin:0 auto;padding:0 15px;}
 
 .content03 .con03 {flex:1;padding:0 30px;text-align:center;}
-.content03 .con03 .con03_dis {position: relative;margin:100px 0;}
+.content03 .con03 .con03_dis {position: relative;margin:94px 0;}
 .content03 .con03 .con03_dis h2 {font-family: 'Noto Serif', 'Noto Sans KR';font-size:30px;font-weight:500;margin-bottom:20px;letter-spacing:0.025rem}
-.content03 .con03 .con03_dis p {font-size:18px;font-weight:400;margin-bottom:45px;letter-spacing:-0.025em;line-height:1.3;}
-.content03 .con03 .con03_dis .con03_d {border: 1px solid #333;padding:5px 30px;}
+.content03 .con03 .con03_dis p {font-size:18px;font-weight:400;margin-bottom:45px;letter-spacing:-0.025rem;line-height:1.3;}
+.content03 .con03 .con03_dis .pre {cursor: pointer;}
+.content03 .con03 .con03_dis .pre em {display:inline-block;font-size:18px;font-weight:400;letter-spacing:0.1rem;border:1px solid #77c4d5;padding:10px 50px;position:relative;overflow: hidden;}
+
+@media screen and (max-width:768px) {
+    /*세번째 섹션 - 글자*/
+
+    .content03 {padding:150px 0;}
+    .content03 .container {display:flex;width:60rem;margin:0 auto;padding:0 15px;}
+
+    .content03 .con03 {flex:1;padding:0 30px;text-align:center;}
+    .content03 .con03 .con03_dis {position: relative;margin:94px 0;}
+    .content03 .con03 .con03_dis h2 {font-family: 'Noto Serif', 'Noto Sans KR';font-size:30px;font-weight:500;margin-bottom:20px;letter-spacing:0.025rem}
+    .content03 .con03 .con03_dis p {font-size:18px;font-weight:400;margin-bottom:45px;letter-spacing:-0.025rem;line-height:1.3;}
+    .content03 .con03 .con03_dis .pre {cursor: pointer;}
+    .content03 .con03 .con03_dis .pre em {display:inline-block;font-size:18px;font-weight:400;letter-spacing:0.1rem;border:1px solid #77c4d5;padding:10px 50px;position:relative;overflow: hidden;}
+
+}
+
+/*세번째 섹션 - 사각형 박스에 색깔나오는거*/
+
+.content03 .con03 .con03_dis .pre em:before {content:"";display:block;width:0;height:100%;background: rgba(119, 196, 213, 0.3); position:absolute;top:0;left:0;transition:0.5s; z-index:1;}
+.content03 .con03 .con03_dis .pre em:hover:before {width:100%;position: absolute;top: 0;left: 0;}
+
+@media screen and (max-width:768px) {
+    /*세번째 섹션 - 사각형 박스에 색깔나오는거*/
+
+    .content03 .con03 .con03_dis .pre em:before {content:"";display:block;width:0;height:100%;background: rgba(119, 196, 213, 0.3); position:absolute;top:0;left:0;transition:0.5s; z-index:1;}
+    .content03 .con03 .con03_dis .pre em:hover:before {width:100%;position: absolute;top: 0;left: 0;}
+}
+
+/*세번째 섹션 - 사진*/
 
 .content03 figure {flex:1;}
+.content03 img {}
+
+@media screen and (max-width:768px) {
+    /*세번째 섹션 - 사진*/
+
+    .content03 figure {flex:1;}
+    .content03 img {}
+}
+
+/*네번째 섹션 - 글자*/
+
+.content04 {padding:150px 0;background:#f2f2f2;}
+.content04 h2 {font-family: 'Noto Serif', 'Noto Sans KR';font-size:30px;font-weight:500;margin-bottom:30px;letter-spacing:0.025em;text-align: center;}
+
+/*네번째 섹션 - 사진*/
+
+.content04 .container {width:1200px;margin:0 auto;padding:0 15px;position: relative;}
+.content04 .con04_tab {}
+.content04 .con04_tab .tab_b {display:block;}
+.content04 .con04_tab figure {}
+.content04 .con04_tab figure:after {content:"";display:block;width:90px;height:1px;background: #333;position: absolute;top:65px;left:770px;}
+
+.content04 .con04_tab figure:before {content:"";display:block;width:15px;height:15px;background: #333;position: absolute;top:58px;left:860px;border-radius:50%;}
+
+.content04 .con04_tab>div {display:none;}
+.content04 .con04_tab>div.on {display:block;}
+
+
+.content04 .tab_menu {display:block;margin-left:870px;position: absolute;top:50px;left:0;}
+.content04 .tab_menu li {display: block;font-size:25px;font-weight: 300;line-height:30px;margin-bottom:20px;color:#7b7b7b;}
+.content04 .tab_menu li.on {font-size:28px;font-weight:400;line-height:30px;margin-bottom:20px;color:#333;margin-left:10px;}
+
+.content05 {padding:150px 0;text-align: center;}
+.content05 .container {width:1200px;margin:0 auto;padding:0 15px;}
+.content05 .container h2 {font-family: 'Noto Serif', 'Noto Sans KR';font-size:30px;font-weight:500;margin-bottom:30px;letter-spacing:0.025em;}
+.content05 .container p {font-size:20px;font-weight:300;margin-bottom:10px;letter-spacing:0.025em;}
+
+.content05 .con05 {margin:0 800px;align-items: center;margin-bottom:40px;}
+.content05 .con05_form {border:1px solid #333;line-height:1;border-radius:10px;}
+.content05 .con05 input {border:none;outline:none;background:#fff;font-size:14px;font-weight:100;color: #777;padding:5px;}
+
+
 
