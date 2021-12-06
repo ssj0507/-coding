@@ -90,7 +90,9 @@ $(function () {
       if($(window).width()>768) {
         $('.line').css({top:50*c +275});
       }else{
-        $('.line').css({left:50*c +40});
+        $('.line').css({left:50*c +60});
+        
+      
       }
       
       $(".con04_menu li").eq(c).addClass("on").siblings().removeClass("on");
@@ -136,11 +138,22 @@ $(function () {
   //모바일용 메뉴//
 
   $(".mopen").on("click", function () {
-    $(".gnb").toggleClass("on");
-    $(".search").fadeToggle();
+    $('.gnb').toggleClass("on");
+    $('.herder .m_icon').toggleClass("on");
+    $('.m_open').on("click");
   });
+  
+  
+
+$('.depth01>li>a').on ('click', function(){
+  if($(window).width() <769) {
+      $(this).next().slideToggle();
+  $(this).parent().siblings().find('.depth02').slideUp();
+  }
+});
 
   $(window).on("resize", function () {
-    $(".total").removeAttr("style");
+    $('.depth02').removeAttr("style");
   });
+
 });
