@@ -109,8 +109,8 @@ body {font-size:0.8rem;}
 .content01 figure {padding:0 20px;}
 .content01 img {max-width:100%;}
 .content01 .con01 {margin-bottom:50px;}
-.content01 figure img {transition:0.5s} 
-.content01 figure.on img {transform:scale(1.3);} 
+.content01 figure img {transition:0.5s;transform:scale(0.7);} 
+.content01 figure.on img {transform:scale(1);} 
 
 /*첫번째 섹션 - 사진밑에글자*/
 
@@ -118,33 +118,29 @@ body {font-size:0.8rem;}
 .content01 span {display:block;font-size:15px;font-weight:300;margin-bottom:10px;}
 .content01 .price {display:block;font-size:15px;font-weight:00;margin-bottom:10px;}
 
+.content01 .con01_d {}
+.content01 .con01_d.on {}
+.content01 strong.on {display:block; font-size:20px;font-weight:400;margin-bottom:10px;}
+.content01 span.on {display:block;font-size:15px;font-weight:300;margin-bottom:10px;}
+.content01 .price.on {display:block;font-size:15px;font-weight:00;margin-bottom:10px;}
 
-/*첫번째 섹션 - 버튼*/
-
-.content01 .slide_bar {position:relative; width:100px;height:3px;background: #ddd;border-radius:3px;margin:30px auto;}
-.content01 .slide_bar>span {display:block;width:20px;height:3px;border-radius:3px;background: #333;position: absolute;top:0;left:0;transition:0.5s;}
-
-/*첫번째 섹션 - 버튼*/
-
-/*.content01 .con01_slider .slick-dots {display:flex;position:absolute;top:350px;left:50%;transform:translateX(-50%);text-align:center;z-index:333;}
-.content01 .con01_slider .slick-dots li{border:1px solid #ddd;background:#ddd; width:10px;height:10px; border-radius:50%; margin:0 15px;overflow: hidden;}
-.content01 .con01_slider .slick-dots li.slick-active{background:#333;}
-.content01 .con01_slider .slick-dots li button {display:none;}*/
 
 
 
 /*첫번째 섹션 - 화살표*/
 
 .content01 .con01_btn i {position:absolute;top:40%;padding:5px; background:transparent;color:#81511c; font-size:40px;border-radius:50%;cursor:pointer;}
-.content01 .con01_btn i.xi-angle-left-thin {left:220px;}
-.content01 .con01_btn i.xi-angle-right-thin {right:220px;}
+.content01 .con01_btn i.xi-angle-left-thin {left:330px;}
+.content01 .con01_btn i.xi-angle-right-thin {right:330px;}
 
 /*두번째 섹션 - 글자*/
 
-.content02 {padding:7.5rem 0;text-align: center;background: #fffbf6;position: relative;}
+.content02 {padding:7.5rem 0 6rem 0;text-align: center;background: #fffbf6;position: relative;}
 .content02 h2 {font-size:1.5rem;font-weight:500;margin-bottom:1.5rem;letter-spacing:-0.025em;}
 
-/*두번째 섹션 - 글자01*/
+
+
+/*두번째 섹션 - 글자 가운데*/
 
 .content02 .container {width:60rem;margin:0 auto;padding:0 0.75rem;}
 .content02 .tab_menu {display: flex;justify-content: center;margin-bottom: 50px;}
@@ -159,9 +155,11 @@ body {font-size:0.8rem;}
 .content02 .con02 strong:after {content:"";display:block;width:2px;height:45px;background: #81511c;margin:20px 100px;}
 .content02 .con02 h3 {display:block; font-size:17px;font-weight:400;margin-bottom:10px;line-height:1.2rem;letter-spacing:-0.025rem;}
 
+
+
 /*두번째 섹션 - 탭 사진*/
 .content02 .tab_con {display:flex;}
-.content02 .tab_con .con02 {flex:1;padding:0 15px}
+.content02 .tab_con .con02 {flex:1;padding:0 15px;}
 .content02 .tab_con .tab_con02 {flex:2;overflow:hidden;position: relative;height:350px;}
 .content02 .tab_con02 figure {padding:0 25px;}
 .content02 .tab_con02 img {margin-bottom:8px;}
@@ -169,19 +167,21 @@ body {font-size:0.8rem;}
 .content02 .tab_con02 .tab_itm02 img {width:100%;}
 .content02 .tab_con02 .con02_slider {position: absolute;top: 0;left: 0;width:100%; visibility: hidden;}
 .content02 .tab_con02 .con02_slider.on {visibility:visible;}
+.con02_d {display:none;}
+.con02_d.on {display:block;}
 
 
 
 /*두번째 섹션 - 사진밑에 글자 */
 
-.content02 .tab_con02 strong {display:block;font-size:15px;letter-spacing:-0.025rem;}
+.content02 .tab_con02 strong {display:block ;font-size:15px;letter-spacing:-0.025rem;}
 .content02 .tab_con02 span {display:block;font-size:17px;font-weight:500;margin-top:10px;}
 
 /*두번째 섹션 - 화살표*/
 
-.content02 .con02_btn i {position:absolute;top:53%;padding:5px; background:#fff;color:#81511c; font-size:30px;border-radius:50%;cursor:pointer;}
-.content02 .con02_btn i.xi-angle-left-thin {left:675px;}
-.content02 .con02_btn i.xi-angle-right-thin {right:265px;}
+.content02 .con02_btn i {position:absolute;top:53%;padding:5px; background:transparent;color:#81511c; font-size:30px;border-radius:50%;cursor:pointer;}
+.content02 .con02_btn i.xi-angle-left-thin {left:760px;}
+.content02 .con02_btn i.xi-angle-right-thin {right:350px;}
 
 /*두번째 섹션 - 버튼*/
 
@@ -191,27 +191,39 @@ body {font-size:0.8rem;}
 .content02 .con02_slider .slick-dots li button {display:none;}
 
 
+/*세번째 섹션 - 글자*/
+
+.content03 {padding:7.5rem 0;text-align:center;color: #333;position:relative; }
+.content03 h2 {font-size:1.5rem;font-weight:500;margin-bottom:0.75rem;letter-spacing:-0.025em;}
+.content03 p {font-size:0.8rem;font-weight:400;margin-bottom:1.5rem;letter-spacing:-0.025em;}
+
+/*세번째 섹션 - 사진*/
+
+.content03 .container {width:60rem;margin:0 auto;padding:0 0.75rem;position: relative;}
+.content03 figure {position: relative;height:504px;}
+.content03 .itm01 {background:url(../img/sec3_pro01.jpg)no-repeat center center/cover;}
+.content03 .itm02 {background:url(../img/sec3_pro02.jpg)no-repeat center center/cover;}
+.content03 .itm03 {background:url(../img/sec3_pro03.jpg)no-repeat center center/cover;}
+.content03 .itm04 {background:url(../img/sec3_pro04.jpg)no-repeat center center/cover;}
+.content03 .itm05 {background:url(../img/sec3_pro05.jpg)no-repeat center center/cover;}
 
 
+/*세번째 섹션 - 글자 및 바탕01 */
+.content03 figure:after {position:absolute;top:13%;right:10%;content:"";width:360px;height:380px;background:rgba(255, 255, 255, 0.3);border-bottom: 4px solid #744d2d; padding:75px 0 0 40px;border-radius: 5px 100px 5px 100px;}
+.content03 figure .con03 {position:absolute;top:30%;right:12%;z-index:888;}
+
+.content03 .con03 strong {display:block;font-size:30px;font-weight:700;margin-bottom:30px;} 
+.content03 .con03 span {display:block;font-size:16px;font-weight:400;line-height:1.3;} 
+
+/*두번째 섹션 - 버튼*/
+
+.content03 .con03_slider .slick-dots {display:flex;position:absolute;top:310px;left:50%;transform:translateX(-50%)}
+.content03 .con03_slider .slick-dots li{border:1px solid #81511c ;width:8px;height:8px; border-radius:50%; margin:0 8px;}
+.content03 .con03_slider .slick-dots li.slick-active{background:#81511c;}
+.content03 .con03_slider .slick-dots li button {display:none;}
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+.content04 .con04 img {border-radius:50%;} 
 
 
 
