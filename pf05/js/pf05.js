@@ -29,6 +29,21 @@ $(function () {
     autoplaySpeed:2500,
     pauseOnHover:false,
     pauseOnFocus:false,
+    //모바일용 slick으로 한면에 꽉차게 하는것//
+    responsive: [
+      {
+        breakpoint: 769,
+        settings: {
+          slidesToShow: 3,
+        }
+      },
+      {
+          breakpoint: 600,
+          settings: {
+            slidesToShow: 1,
+          }
+        },
+  ]
 
 
   });
@@ -67,6 +82,21 @@ $(function () {
     pauseOnFocus:false,
     dots:true,
     slidesToScroll:3,
+       //모바일용 slick으로 한면에 꽉차게 하는것//
+       responsive: [
+        {
+          breakpoint: 769,
+          settings: {
+            slidesToShow: 3,
+          }
+        },
+        {
+            breakpoint: 600,
+            settings: {
+              slidesToShow: 1,
+            }
+          },
+    ]
 
   });
 
@@ -90,6 +120,42 @@ $(function () {
 
   $('.con03 .button').on('click', function(){
     $('.con03_slider').slick('slickNext')
-  })
+  });
+
+  //toTop//
+
+  $('.toTop').on('click', function () {
+    $('html, body').animate({ scrollTop: 0 }, 400);
+  });
+
+  $(window).on('scroll', function () {
+    var sct = $(window).scrollTop();
+    //if(sct>400){
+    //    $('#toTop').fadeIn()
+    // }else
+    //$('#toTop').fadeOut()
+    //}
+    sct > 400 ? $('.toTop').fadeIn() : $('.toTop').fadeOut();
+    $(this).css({ top: 300 + sct });
+  });
+
+
+  //모바일용 메뉴//
+
+  $('.mopen').on('click', function () {
+    $(this).toggleClass('on');
+    $('.gnb').toggleClass('on');
+    $('.herder .m_icon').toggleClass('on');
+  
+
+  });
+  
+
+  $('.depth01>li>a').on ('click', function(){
+    if($(window).width() <769) {
+        $(this).next().slideToggle();
+    $(this).parent().siblings().find('.depth02').slideUp();
+    }
+  });
 
 });
