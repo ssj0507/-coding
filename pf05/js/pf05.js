@@ -111,6 +111,30 @@ $(function () {
     $('.con03_slider').slick('slickNext')
   });
 
+  
+//여섯번째 js로 하는 slick 버전//
+
+var Rsd = $('.c_slider');
+
+var slickOptions = {
+    infinite: true,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    autoplay:true,
+    autoplaySpeed:2000,
+    centerMode:true,
+    dots:false,
+    arrows:false
+};
+
+$(window).on('load resize', function() {
+    if($(window).width() > 768) {
+        Rsd.slick('unslick');
+    }else{
+        Rsd.not('.slick-initialized').slick(slickOptions);
+    }
+});
+
   //toTop//
 
   $('.toTop').on('click', function () {
