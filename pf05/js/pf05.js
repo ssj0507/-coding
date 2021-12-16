@@ -34,15 +34,9 @@ $(function () {
       {
         breakpoint: 769,
         settings: {
-          slidesToShow: 3,
+          slidesToShow: 1,
         }
       },
-      {
-          breakpoint: 600,
-          settings: {
-            slidesToShow: 1,
-          }
-        },
   ]
 
 
@@ -87,15 +81,10 @@ $(function () {
         {
           breakpoint: 769,
           settings: {
-            slidesToShow: 3,
+            slidesToShow:1,
           }
-        },
-        {
-            breakpoint: 600,
-            settings: {
-              slidesToShow: 1,
-            }
-          },
+        }
+     
     ]
 
   });
