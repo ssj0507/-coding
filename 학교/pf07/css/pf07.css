@@ -1,0 +1,99 @@
+/*홈페이지 라인간격 볼수 있음*/
+
+*{outline: 1px solid #f00--;}
+
+html {font-size:20px;}
+body {font-size:0.8rem;}
+#wrap {}
+
+@media screen and (max-width:768px) {
+    html {font-size:20px;}
+    body {font-size:0.8rem;}
+    #wrap {}
+
+}
+
+
+
+
+
+/*헤더 - 고정 */
+
+.herder {position:fixed;top:0;left:0;line-height:4rem;width:100%;color:#333;transition:1s;z-index:888;background: rgb(8, 99, 36);}
+
+
+/*헤더 - 로고*/
+
+.herder h1 img {width:10rem;align-items: center;}
+.herder a {display: block;}
+.herder .container {display:flex;justify-content:space-between;width:60rem;margin:0 auto;padding:0 0.75rem;}
+
+
+
+
+
+
+
+
+
+
+/*헤더 - 내비*/
+
+.gnb {}
+.gnb .depth01 {display:flex;font-size:0.8rem;font-weight:400;}
+.gnb .depth01>li>a {display:block;padding:0 35px;}
+.gnb .depth01>li {position: relative;}
+.gnb .depth01>li>a:hover {display: block; color: #81511c;}
+
+.gnb .depth01>li>a:after {content:"";display: block;width:0;height:3px;background:#81511c;position:absolute;bottom:0;left:50%;transform:translateX(-50%); transition:0.3s;}
+
+.gnb .depth01>li>a:hover:after {width:100%;}
+
+
+/*메인 비주얼 - 사진넣기 */
+
+.main_visual {position: relative;}
+.main_visual figure {height:550px;position: relative;}
+.main_visual .itm01 {background:url(../img/main_visual01.jpg)no-repeat center center/cover;}
+.main_visual .itm02 {background:url(../img/main_visual02.jpg)no-repeat center center/cover;}
+.main_visual .itm03 {background:url(../img/main_visual03.jpg)no-repeat center center/cover;}
+.main_visual .itm04 {background:url(../img/main_visual04.jpg)no-repeat center center/cover;}
+
+/*버튼*/
+
+.main_visual .main_slider .slick-dots {position: absolute;bottom:30px;left:0;width:100%; text-align:center;z-index:333;}
+.main_visual .main_slider .slick-dots li {display:inline-block;width:4rem;height:0.2rem;background: rgba(0, 0, 0, 0.5);border-radius: 0.1rem;margin:0 0.25rem;overflow: hidden;}
+.main_visual .main_slider .slick-dots li:after {content:"";display:block;width:0;height:100%;background:#77c4d5;}
+.main_visual .main_slider .slick-dots li.slick-active:after {width:100%;transition:3s;}
+.main_visual .main_slider .slick-dots li button {display:none;}
+
+
+/*메인 비주얼 - 글자넣기01*/
+
+.main_visual figure .slg {position:absolute;top:50%;left:50%;width:60rem;padding:0 0.75rem;transform:translate(-50%,-50%);color:#333;text-align: center;line-height:1;}
+.main_visual figure .slg strong {display:block;font-size:30px;font-weight:500;letter-spacing:-0.025rem;margin-bottom:30px;}
+.main_visual figure .slg h2 {font-size:2.7rem;font-weight:700;letter-spacing:0.5em;margin-bottom:0.95rem;}
+.main_visual figure .slg p {font-size:1.3rem;font-weight:500;letter-spacing:0.1em;margin-bottom:0.75rem;}
+.main_visual figure .slg span {font-size:1.3rem;font-weight:700;letter-spacing:0.1em;margin-bottom:0.75rem;color:#369;vertical-align: baseline;font-size: inherit;}
+
+
+.link {position:absolute;top:500px;left:50%;transform:translateX(-50%);width:1200px;overflow:hidden;z-index:888;height:130px;}
+.link_wrap {display:flex;}
+.link figure {width:12.5%;padding:15px 0px;text-align:center;background:#ff0;border-right:1px solid #f2f2f2;transition:0.3s;}
+.link figure:last-child {border-right:none;}
+.link figure:hover {background:#ddd;}
+.link figure a {display:block;padding-bottom:10px;}
+.link figure i {font-size:45px;padding:7px;color:#2155a4;}
+
+
+
+
+
+
+
+
+
+
+
+
+
