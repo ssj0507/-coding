@@ -1,0 +1,221 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rufina:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Myeongjo:wght@400;700;800&display=swap');
+{font-family: 'Nanum Myeongjo', serif;}
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR:wght@100;200;300;400;500;600;700&display=swap');
+{font-family: 'IBM Plex Sans KR', sans-serif;}
+@import url('https://fonts.googleapis.com/css2?family=Do+Hyeon&display=swap');
+{font-family: 'Do Hyeon', sans-serif;}
+
+/*홈페이지 라인간격 볼수 있음*/
+*{outline: 1px solid #f00;}
+html {font-size:20px;}
+body {font-size:0.8rem;}
+
+/*로딩 화면*/
+
+#loading {position:fixed;top:0;left:0;width:100%;height:100vh;background:#354652;overflow: hidden;z-index:999999;animation: load-animation 5s forwards;}
+@keyframes load-animation{
+    0%{}
+    70%{top:0;left:0;}
+    100%{top:-100vh;}
+}
+.load-box {position:relative;display:grid;grid-template-columns:repeat(2,1fr);gap:2rem;align-items:center;width:70rem;margin:0 auto;z-index:888;}
+/*사진 화면 움직임*/
+
+.move01 {width:800px;height:875px; overflow:hidden; transition:0.3s;transform:scale(0.9);vertical-align:middle; z-index:1}
+.move01 path {fill:#fff;opacity:0.2;animation:svgani 4.5s infinite}
+.move01 path:nth-child(1) {transform:translate(-40px,-40px) scale(1.1)}
+.move01 path:nth-child(2) {transform:translate(-20px,-20px) scale(1.05)}
+.move01 path:nth-child(3) {opacity:1;}
+@keyframes svgani{
+    0% {d:path("M786.486,500.5c0,71.012-25.836,135.988-68.621,186.043C665.32,748.018,587.211,786.986,500,786.986c-81.902,0-155.776-34.368-207.988-89.47C243.357,646.17,213.514,576.82,213.514,500.5c0-83.08,35.365-157.9,91.863-210.229c51.098-47.328,119.482-76.256,194.623-76.256c76.005,0,145.097,29.598,196.379,77.896	C751.853,344.155,786.486,418.283,786.486,500.5z");}
+    50% {d:path("M786.486,500.5c0,71.012-5.123,177.524-47.908,227.579C686.033,789.554,587.211,758.077,500,758.077c-81.902,0-171.187,28.104-223.398-26.998c-48.654-51.347-63.087-154.259-63.087-230.579c0-83.08,6.59-162.57,63.087-214.899c51.098-47.328,140.849-37.498,215.989-37.498c76.005,0,169.866-10.016,221.148,38.282	C769.213,338.63,786.486,418.283,786.486,500.5z");}
+    100% {d:path("M786.486,500.5c0,71.012-25.836,135.988-68.621,186.043C665.32,748.018,587.211,786.986,500,786.986c-81.902,0-155.776-34.368-207.988-89.47C243.357,646.17,213.514,576.82,213.514,500.5c0-83.08,35.365-157.9,91.863-210.229c51.098-47.328,119.482-76.256,194.623-76.256c76.005,0,145.097,29.598,196.379,77.896	C751.853,344.155,786.486,418.283,786.486,500.5z");}
+}
+
+/*글자*/
+
+#loading .loading_txt h2 {font-size:50px;font-weight:500; font-family: 'Playfair Display', serif;margin-bottom:30px;color:#f2f2f2;margin-left:88px;}
+
+#loading .loading_txt p {display:block;color:#f2f2f2;font-size:20px;font-weight:400;font-family: 'Playfair Display', serif;letter-spacing:0.1rem;text-align:right; animation:load-text 5s 1s forwards;opacity:0;margin-right:10px;}
+@keyframes load-text{
+    0%{opacity:0}
+    30%{opacity:0}
+    50%{opacity:1}
+    60%{opacity:0}
+    70%{opacity:1}
+    100%{opacity:1}
+}
+
+/*헤드*/
+#header h1 {position:fixed; top:5rem;left:5rem;z-index:999;font-size:14px;font-weight:300;}
+#header p {position:fixed;bottom:5rem;left:5rem;z-index:999;font-size:14px;font-weight:300;}
+/* 메뉴*/
+.m_bg {display:none;position:fixed;top:0;left:0;width:100%;height:100vh;background:#ebe8e1;z-index:222;overflow: hidden;}
+.m_bg ul {position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);z-index:333;}
+.m_bg ul>li>a {display:block;font-size:30px;font-weight:500;line-height:70px;text-align:center;}
+.m_bg ul>li>a:hover {display: block; color: #81511c;}
+
+/* 메뉴 배경 글자 타원선*/
+.ball span:before {content:""; display:block; width:150px; height:150px;position:absolute;top:160px; left:59%; border:1px solid #fff; border-radius:50%;}
+.ball span:after {content:""; display:block; width:500px; height:700px;position:absolute; top:140px; left:50%; transform:translate(-50%) rotate(30deg); border:1px solid #fff; border-radius:50%; z-index:1;}
+    
+
+
+
+/* 메뉴 버튼 */
+.m_btn {position:fixed;top:5rem;right:5rem;width:45px;height:45px;border-radius:50%; background:#fff;padding:10px;cursor:pointer;z-index:9999;}
+.m_btn>span {display:block;width:25px;height:2px;background:#aaa;position:absolute;transition:0.5s;}
+.m_btn>span:nth-child(1){top:13px;}
+.m_btn>span:nth-child(2){top:23px;}
+.m_btn>span:nth-child(3){top:23px;}
+.m_btn>span:nth-child(4){top:33px;}
+
+/* 메뉴 이펙트 */
+.m_btn.on>span:nth-child(1){opacity:0}
+.m_btn.on>span:nth-child(2){transform:rotate(45deg);}
+.m_btn.on>span:nth-child(3){transform:rotate(-45deg);}
+.m_btn.on>span:nth-child(4){opacity:0}
+
+/*바탕화면 시작 */
+/*왼쪽 위에 글자 - 2022 PORTPOLIO*/
+#main .slogan {position:absolute;top:12rem;left:13rem;z-index:9;}
+#main .slogan h2 {font-size:15px;font-weight:400;line-height:1.2;}
+#main .slogan h2>span{font-size:14px;font-weight:300;}
+#main .sl_txt {position:absolute;bottom:12rem;left:13rem;}
+#main .sl_txt p {font-size:35px;font-weight:400;margin-bottom:20px;line-height:1.3;font-family: 'Rufina', serif; z-index:9;}
+#main .sl_txt strong {display:block;font-size:15px;font-weight:300;line-height:1.3;}
+
+
+
+/*오른쪽 원 */
+.c_02 {width:800px;height:800px;border-radius:50%; position:absolute;top:100px;right:-500px;background: #f6f5e5;z-index:-4;}
+
+
+/*바탕화면 끈적이는*/
+.c_svg{filter:url('#circle-g');position:absolute;top:0;left:0;width:100%;z-index:-1}
+/* 왼쪽 움직이는거01*/
+.c01 {position:absolute;top:-170px;left:0px;transform:rotate(250deg) scale(2);z-index:55;}
+.c01 path {fill:#ebe1d6; animation:ani03 5s infinite; }
+@keyframes ani03{
+    0% {d:path("M381.499,249.5c2.072,77.586,81.466,97.813,63.903,173.504c-16.308,70.281-96.617,85.743-158.772,41.938c-76.292-53.766-238.894,6.013-220.762-95.24c7.505-41.909,135.613-96.727-16.244-165.611C-59.984,154.371,243.193-93.14,285.289,43.644c17.974,58.407,88.834,6.871,124.855,45.336C474.903,158.132,379.474,173.567,381.499,249.5z");}
+    50% {d:path("M381.499,249.5C365.466,325.439,505,272,445.402,423.004C418.915,490.114,352.5,447,286.63,464.941c-90.053,24.528-238.894,6.013-220.762-95.24C73.374,327.792,51,312.5,49.624,204.09C48.097,83.742,102.5,38,285.289,43.644c61.081,1.886,114.31-6.296,124.855,45.336C427,171.5,391,204.5,381.499,249.5z");}
+    100% {d:path("M381.499,249.5c2.072,77.586,81.466,97.813,63.903,173.504c-16.308,70.281-96.617,85.743-158.772,41.938c-76.292-53.766-238.894,6.013-220.762-95.24c7.505-41.909,135.613-96.727-16.244-165.611C-59.984,154.371,243.193-93.14,285.289,43.644c17.974,58.407,88.834,6.871,124.855,45.336C474.903,158.132,379.474,173.567,381.499,249.5z");}
+}
+.c02 {position:absolute;top:345px;right:92px;width:143px;height:143px;border-radius:50%;background: #dccdb9;}
+
+/* 오른쪽 무브 - 원이 왼쪽으로 이동*/
+.c_m02 {position:absolute;width:100px;height:100px;background:#dccdb9;border-radius:50%;position:absolute;top:350px;right:150px;z-index:2;animation:c_m02 5s infinite;animation-timing-function:ease-out;}
+@keyframes c_m02{
+    0% {opacity:1}
+    100% {opacity:0;transform:scale(0.8);top:200px;right:550px;}
+}
+
+/* 오른쪽 움직이는거 - 삼각형*/
+.c03 {position:absolute; top:10px; right:1px; z-index:-1; transform:rotate(-120deg) scale(0.7);}
+.c03 path {fill:#c08768; animation:ani01 2.8s infinite; }
+@keyframes ani01{
+            0% {d:path("M281.658,84.515c0,53.575-53.416,174.743-132.126,174.743c-78.708,0-142.514-43.431-142.514-97.006c0-53.12,118.662-80.704,125.839-82.827c7.452-2.204,23.617-7.27,24.251-7.485C239.533,43.903,281.658,30.94,281.658,84.515z");}
+            50% {d:path("M281.658,84.515c27.621,45.906-67.825,184.318-132.126,174.743C71.683,247.665,1.169,215.507,7.018,162.252C14.167,97.167,76.99,74.623,84.167,72.5c21-10.333,48.367-19.452,49-19.667C215.592,24.796,257.267,43.976,281.658,84.515z");}
+            100% {d:path("M281.658,84.515c0,53.575-53.416,174.743-132.126,174.743c-78.708,0-142.514-43.431-142.514-97.006c0-53.12,118.662-80.704,125.839-82.827c7.452-2.204,23.617-7.27,24.251-7.485C239.533,43.903,281.658,30.94,281.658,84.515z");}
+}
+
+/*왼쪽 원*/
+.c04 {position:absolute;top:450px;left:410px;width:25px;height:25px;border-radius:50%;border:2px solid #c08768;}
+
+.c05 {position:absolute;top:380px;left:450px;width:50px;height:50px;border-radius:50%;background: #c08768;}
+
+
+
+
+
+
+/* 오른쪽 바탕*/
+.b01 {width:100%;position:absolute;bottom:0px;right:0;z-index:-1}
+.b01 path {fill:#dccdb9; animation:ani07 4.8s infinite; }
+@keyframes ani07{
+            0% {d:path("M1920,969V404.51c-45.59-43.29-131.73-81.75-193.66-54.79c-32.81,14.28-48.99,45.48-40.16,80.28c10.48,41.28,43.98,57.83,77.17,78.37c57.06,35.32,102.81,99.68,99.64,169.58c-1.76,38.82-31.28,65.77-69.86,64.59c-79.77-2.45-130.25-10.73-209.84-16.65c-79.59-5.91-168.78,12.89-215.43,77.65c-14.08,19.55-23.68,42.51-40.77,59.49c-26.62,26.47-67.33,33.92-104.7,30.33c-37.37-3.59-130.65-35.34-167.05-44.54c-80.66-20.38-160-51-217.7-9.53c-95.08,68.33-195.58,114.46-312.05,102.54c-90.82-9.3-199.82-61.67-270.14,27.16L1920,969L1920,969z");}
+            50% {d:path("M1920,969V404.51c-45.59-43.29-131.73-81.75-193.66-54.79c-32.81,14.28-48.99,45.48-40.16,80.28c10.48,41.28,43.98,57.83,77.17,78.37c57.06,35.32,102.81,99.68,99.64,169.58c-1.76,38.82-34.99,69.91-75.64,76.52c-55.35,10.29-92.74-28.06-166.78-43.04c-39.78-9.43-97.95-20.88-158.2,79.04c-9.9,23.94-89.63,133.71-149.14,151.35c-64.04,20.45-131.28-91.62-180.26-110.47c-72-25.47-113.13,35.04-132.35,57.94c-65.76,95.88-119.63,153.43-139.71,172.53c-95.08,68.33-204.84-172.73-321.31-184.65c-90.82-9.3-108.73,10.29-284.14,91.83L1920,969L1920,969z");}
+            100% {d:path("M1920,969V404.51c-45.59-43.29-131.73-81.75-193.66-54.79c-32.81,14.28-48.99,45.48-40.16,80.28c10.48,41.28,43.98,57.83,77.17,78.37c57.06,35.32,102.81,99.68,99.64,169.58c-1.76,38.82-31.28,65.77-69.86,64.59c-79.77-2.45-130.25-10.73-209.84-16.65c-79.59-5.91-168.78,12.89-215.43,77.65c-14.08,19.55-23.68,42.51-40.77,59.49c-26.62,26.47-67.33,33.92-104.7,30.33c-37.37-3.59-130.65-35.34-167.05-44.54c-80.66-20.38-160-51-217.7-9.53c-95.08,68.33-195.58,114.46-312.05,102.54c-90.82-9.3-199.82-61.67-270.14,27.16L1920,969L1920,969z");}
+            
+}
+/* 왼쪽 선 */
+.s01 {width:100%;position:absolute;top:100px;left:-55px;display:none;}
+
+/*오른쪽 바 */
+.line02 {width:460px;transform:rotate(8deg);position:absolute;bottom:10px;left:500px;z-index:-1}
+
+/*-첫번째 포플------------------------------*/
+#slide {position: relative;}
+#slide h2 {position:absolute;top:12rem;left:13rem;font-size:15px;font-weight:500;line-height:1.2;}
+.container {padding-top:75px;width:60rem;margin:0 auto;z-index:888;}
+.itm {width:66.666666%;float:left;padding:0 0 0 100px; position:relative;}
+.section .mockup {background:url(../img/mockup_nb.png) no-repeat center top/100%;padding:4% 12.5% 15% 12.5%;width:96%;}
+.section .mockup figure {position:relative;padding-bottom:63%;overflow:hidden;}
+.section .mockup figure img {position:absolute;top:0;left:0;width:100%;transition:1s;cursor: pointer;}
+.section .mockup figure:hover img {transform:translateY(-100%);top:100%;}
+
+.section .hover_p{position:absolute;top:580px;left:10.5%;z-index:8;color:#333;font-size:40px;transform:translateX(-50%);animation:a 2s infinite;}
+.section .hover_p.off {display:none;}
+
+.section .itm_m {position:absolute;bottom:230px;left:13%;width:200px; z-index:5}
+.section .mobile {background:url(../img/mockup_ph.png) no-repeat center top/100%;padding:17% 13% 30% 15%;width:80%;}
+.section .mobile figure {position:relative;padding-bottom:190px;overflow:hidden;}
+.section .mobile figure img {position:absolute;top:0;left:0;width:100%;transition:1s;cursor: pointer;}
+.section .mobile figure:hover img {transform:translateY(-100%);top:100%;}
+
+
+/*오른쪽 글자*/
+.section .description {width:33.333333%;float:left;padding:0 0 0 30px;}
+.section .description h3 {font-size:1.5rem;font-weight: 500;color: #333;line-height: 40px;}
+.section .description p {font-size:0.75rem;font-weight:300;color:#666;line-height: 20px;margin-bottom:30px}
+
+.section .description dl dt {font-size:18px;font-weight: 500;color: #333;line-height: 30px;float: left;display: block;width: 30%;margin-bottom:5px;}
+.section .description  dd {font-size:15px;font-weight:300;color:#333;line-height:30px;float:left;width:70%;margin-bottom:5px;} 
+.section .description dt:last-of-type {padding-bottom:0;}
+.section .description dd:last-of-type{padding-bottom:0;}
+.section .description dd li {font-size:16px;font-weight:300;color:#333;line-height:30px;float:left;width:100%}
+
+.section .description .color li {display:block;width:20px;height:20px;background:#ddd;border-radius:50%;margin:5px 10px 5px 0;}
+
+.section .description .btn {}
+.section .description .btn li {display:inline-block;margin:15px 10px 15px 0;}
+.section .description .btn li:first-child{margin-left:0;}
+.section .description .btn li:last-child{margin-right:0;}
+.section .description .btn a {display:block;width:130px;background: #aaa;color:#fff;font-weight:300;font-size:15px;padding:15px;text-align:center;transition:0.3s;border-radius:5px}
+.section .description .btn li:first-child a {background:#354652}
+.section .description .btn li:hover a {background:#c08768;color:#fff;}
+
+.n01, .n03, .n05 {position:absolute;top:130px;left:-95px;transform:rotate(0deg) scale(1);}
+
+
+.circle_01 {width:1000px;height:1000px;background:#ddd;border-radius:50%;position:absolute;top:50px;left:1300px;z-index:-9;}
+
+
+
+/*pf02 컬러*/
+/*톤28*/
+.section .description .ku li:nth-of-type(1) {background:#10069f;}
+.section .description .ku li:nth-of-type(2) {background:#639338;}
+.section .description .ku li:nth-of-type(3) {background:#f1ede7;}
+
+.section .description .tu li:nth-of-type(1) {background:#10069f;}
+.section .description .tu li:nth-of-type(2) {background:#639338;}
+.section .description .tu li:nth-of-type(3) {background:#f1ede7;}
+
+
+
+
+
+
+
+
+
+
+
+/* 바로가기 네비게이션 */
+.navbar {position:fixed;top:50%;transform:translateY(-50%);right:50px;width:100px;height:120px;z-index:333;}
+.navbar>li a {display:block;text-indent:-9999px;position:relative;line-height:20px;}
+.navbar>li a:after {content:"";display:block;height:2px;width:25px;margin: -2px 0 0 -2px;background:#555;position:absolute;top:10px;right:0;transition:0.2s;}
+.navbar>li.on a:after {transform:rotate(20deg)}
